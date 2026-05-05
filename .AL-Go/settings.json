@@ -1,7 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/aholstrup1/issue-2235-bug-pipelineinitialize-ps1-is-not-execu-08c550/Actions/.Modules/settings.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go-Actions/main/.Modules/settings.schema.json",
   "country": "us",
-  "appFolders": [],
+  "appFolders": ["TestApp"],
   "testFolders": [],
-  "bcptTestFolders": []
+  "bcptTestFolders": [],
+  "workspaceCompilation": { "enabled": false },
+  "customCodeCops": [
+    ".alcops/ALCops.ApplicationCop.dll",
+    ".alcops/ALCops.DocumentationCop.dll",
+    ".alcops/ALCops.FormattingCop.dll",
+    ".alcops/ALCops.LinterCop.dll",
+    ".alcops/ALCops.PlatformCop.dll",
+    ".alcops/ALCops.TestAutomationCop.dll",
+    ".alcops/ALCops.Common.dll"
+  ]
 }
