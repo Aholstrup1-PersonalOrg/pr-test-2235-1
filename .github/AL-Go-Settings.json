@@ -1,5 +1,6 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go-Actions/v9.0/.Modules/settings.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/aholstrup1/issue-2235-bug-pipelineinitialize-ps1-is-not-execu-08c550/Actions/.Modules/settings.schema.json",
   "type": "PTE",
-  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@main"
+  "templateUrl": "https://github.com/microsoft/AL-Go@aholstrup1/issue-2235-bug-pipelineinitialize-ps1-is-not-execu-08c550",
+  "templateSha": "bf0f4fc27da94ec6109eeedfb2bc88d24309dce9"
 }
