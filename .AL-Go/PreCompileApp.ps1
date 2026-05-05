@@ -1,5 +1,5 @@
 Param(
-    [ValidateSet(''app'',''testApp'')]
+    [ValidateSet('app','testApp')]
     [string] $appType,
     [ref] $compilationParams
 )
@@ -18,7 +18,7 @@ $outputPath = Join-Path $env:GITHUB_WORKSPACE ".alcops"
 # PreCompileApp runs once per app group (apps + testApps). Skip if analyzers
 # are already on disk so we don't re-download for the testApp pass.
 if ((Test-Path $outputPath) -and
-    @(Get-ChildItem -Path $outputPath -Filter ''*.dll'' -ErrorAction SilentlyContinue).Count -gt 0) {
+    @(Get-ChildItem -Path $outputPath -Filter '*.dll' -ErrorAction SilentlyContinue).Count -gt 0) {
     Write-Host "ALCops analyzers already present in $outputPath. Skipping download (appType=$appType)."
     return
 }
@@ -27,7 +27,7 @@ Write-Host "Installing ALCops analyzers (appType=$appType)..."
 Write-Host "  Output path: $outputPath"
 Write-Host "  Detect using: $env:artifact"
 
-npx --yes ''@alcops/core'' download `
+npx --yes '@alcops/core' download `
     --output $outputPath `
     --detect-using $env:artifact `
     --detect-from bc-artifact
